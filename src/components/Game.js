@@ -28,12 +28,18 @@
 //   };
 
 //   const handleLetterClick = (letter) => {
-//     console.log(`Letter clicked: ${letter}`);
 //     setGuessedLetters([...guessedLetters, letter]);
 
 //     if (!word.includes(letter)) {
 //       setIncorrectGuesses(incorrectGuesses + 1);
 //     }
+//   };
+
+//   const handleRefreshClick = () => {
+//     setWord("");
+//     setGuessedLetters([]);
+//     setIncorrectGuesses(0);
+//     fetchRandomWord();
 //   };
 
 //   const disabledLetters = [
@@ -130,9 +136,10 @@
 //       <pre>{getHangmanFigure()}</pre>
 //       <WordDisplay word={word} guessedLetters={guessedLetters} />
 //       <LetterButtons
-//         onClick={handleLetterClick} // Make sure it's not onClick={handleLetterClick()}
+//         onClick={handleLetterClick}
 //         disabledLetters={disabledLetters}
 //       />
+//       <button onClick={handleRefreshClick}>New Word</button>
 //       {isGameWon() && (
 //         <p className="win-message">Congratulations! You've won!</p>
 //       )}
@@ -148,7 +155,7 @@
 
 // export default Game;
 
-// src/components/Game.js
+// src/components/Game.js (keyboard)
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WordDisplay from "./WordDisplay";
@@ -187,6 +194,12 @@ const Game = () => {
         setIncorrectGuesses(incorrectGuesses + 1);
       }
     }
+  };
+  const handleRefreshClick = () => {
+    setWord("");
+    setGuessedLetters([]);
+    setIncorrectGuesses(0);
+    fetchRandomWord();
   };
 
   const getHangmanFigure = () => {
@@ -276,6 +289,7 @@ const Game = () => {
       <h1>Hangman Game</h1>
       <pre>{getHangmanFigure()}</pre>
       <WordDisplay word={word} guessedLetters={guessedLetters} />
+      <button onClick={handleRefreshClick}>New Word</button>
       {isGameWon() && (
         <p className="win-message">Congratulations! You've won!</p>
       )}
