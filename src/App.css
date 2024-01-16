@@ -31,7 +31,6 @@ button[disabled] {
 } */
 
 /* src/App.css */
-/* src/App.css */
 .App {
   text-align: center;
 }
@@ -60,8 +59,8 @@ button {
   cursor: pointer;
   touch-action: manipulation; /* Enable touch events on mobile */
 }
-
-/* button[disabled] {
+/* 
+button[disabled] {
   cursor: not-allowed;
   background-color: #ccc;
 } */
