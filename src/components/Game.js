@@ -490,7 +490,7 @@ const Game = () => {
       )}
       {isGameLost() && (
         <p className="lose-message">
-          Sorry! You've lost. The correct word was "{word}".
+          Sorry! You've lost. The correct answer was "{word}".
         </p>
       )}
       <p>Incorrect Guesses: {incorrectGuesses}</p>
