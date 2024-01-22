@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.5",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.2",
     "express": "^4.18.2",
     "mongoose": "^8.0.4",
     "react": "^18.2.0",
@@ -15,8 +16,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+
+
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run start:frontend",
+    "start:frontend": "react-scripts start",
+    "start:backend": "node Hangman-backend/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
