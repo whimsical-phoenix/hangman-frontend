@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -6,11 +8,9 @@ const gameRouter = require("./routes/game");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable CORS for all routes
 app.use(cors());
 app.use(express.json());
 
-// Connect to MongoDB using environment variable directly
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -21,7 +21,6 @@ connection.once("open", () => {
   console.log("MongoDB connection established successful");
 });
 
-// Use API routes
 app.use("/api/game", gameRouter);
 
 app.listen(PORT, () => {
