@@ -17,9 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run start:frontend",
-    "start:frontend": "react-scripts start",
-    "start:backend": "node Hangman-backend/server.js",
+    "start": "npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
