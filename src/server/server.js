@@ -6,7 +6,7 @@ const cors = require("cors");
 const gameRouter = require("./routes/game");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000; // Update to match Render configuration
 
 app.use(cors());
 app.use(express.json());
