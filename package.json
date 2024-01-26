@@ -21,11 +21,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm start\" \"npm run server\"",
-    "server": "node src/Hangman-backend/server.js"
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
+    "server": "node src/server/server.js"
   },
   
-  
+ 
  
   "eslintConfig": {
     "extends": [
