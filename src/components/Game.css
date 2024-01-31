@@ -1,4 +1,15 @@
 /* src/components/Game.css */
+/* Game.css */
+.game-container {
+  margin-top: 50px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .category-section {
   background-color: #7ac7d2b9;
   padding: 10px;
